@@ -15,7 +15,7 @@
 
     <div class="feed">
         <?php
-        $sql = "SELECT m.id, m.title, m.file AS 'path', m.likes, m.created_at AS 'date', u1.user_name AS 'author', u2.user_name AS 'admin' FROM memes AS m JOIN users AS u1 ON m.user_id = u1.id JOIN users AS u2 ON m.admin_id = u2.id WHERE m.id=".$_POST["id"]."";
+        $sql = "SELECT m.id, m.title, m.file AS 'path', m.likes, m.created_at AS 'date', u1.user_name AS 'author', u2.user_name AS 'admin' FROM memes AS m JOIN users AS u1 ON m.user_id = u1.id JOIN users AS u2 ON m.admin_id = u2.id WHERE m.id=".$_GET["id"]."";
             if($results = $db->query($sql)){
                 while($row = $results->fetch_assoc()){
                     echo "<div class='meme'>
@@ -38,7 +38,7 @@
 
         <div class="commentSection">
             <?php
-                $sql = "SELECT u.user_name AS `name`, c.content AS `text`, c.created_at AS `date`, c.modified_at, c.deleted_at FROM `comments` AS c JOIN users AS u ON c.user_id = u.id WHERE c.meme_id = ".$_POST["id"]."";
+                $sql = "SELECT u.user_name AS `name`, c.content AS `text`, c.created_at AS `date`, c.modified_at, c.deleted_at FROM `comments` AS c JOIN users AS u ON c.user_id = u.id WHERE c.meme_id = ".$_GET["id"]."";
                 if($results = $db->query($sql)){                    
                     while($row = $results->fetch_assoc()){
                         echo "<div class='comment'>

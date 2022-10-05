@@ -30,10 +30,7 @@
                         </div>
                         <div class='memeImg'>
                             <img src='imgs/".$row["path"]."'>
-                            <form action='memeInspect.php' method='POST'>
-                                <input type='hidden' id='id' name='id' value=".$row['id'].">
-                                <input type='submit' value='Comments'>
-                            </form>
+                            <a href='memeInspect.php?id=".$row["id"]."'>comentarze</a>
                         </div>
                     </div>";
             }
@@ -44,7 +41,6 @@
         $db->close();
         ?>
     </div>
-    <form action="memeInspect.php" method="POST"></form>
     <div class="nav">
         <form method="post">
             <button><-</button>
