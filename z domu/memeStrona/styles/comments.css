@@ -1,0 +1,40 @@
+.commentsSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1A1B;
+    width: 700px;
+    min-height: 100px;
+    border-radius: 10px;
+    margin: 5px 0px 20px 0px;
+    border: 1px solid #343536;
+    border-style: solid;
+}
+
+.commentDiv{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 14px;
+}
+
+.commentData{
+    margin-left: 14px;
+    color: #696b6b;
+    font-size: 15px;
+}
+
+.commentText{
+    margin-left: 24px;
+    color: white;
+    font-size: medium;
+}
+
+.line{
+    border-right: 2px solid #343536;
+    height: 100%;
+    width: 2px;
+}
+
+.noComments{
+    text-align: center;
+    font-size: 300%;
+}

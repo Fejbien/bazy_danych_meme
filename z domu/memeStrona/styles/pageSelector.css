@@ -1,0 +1,51 @@
+.pageSelector{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pageSelector input{
+    background-color: #030303;
+    color: #d7dadc;
+}
+
+.pageSelector input[type=number]{
+    background-color: #2d2d2e;
+    color: #d7dadc;
+    width: auto;
+    text-align: center;
+    width: 100px;
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 25px;
+}
+
+.pageSelector input[type=number]::placeholder{
+    color: #d7dadc;
+    opacity: 0.9;
+}
+
+.pageSelector .arrowsInput{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #d7dadc;
+    font-size: 20px;
+    border: 0px;
+    background-color: #030303;
+}
+
+.pageSelector .arrowsInput:hover{
+    color: red;
+}
+
+
+/* usuwa strzalki */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
